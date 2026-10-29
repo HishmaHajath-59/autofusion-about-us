@@ -1,0 +1,397 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>About Us</title> 
+ 
+  <!-- Bootstrap CSS --> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+rel="stylesheet"> 
+ 
+  <!-- Bootstrap Icons --> 
+  <link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
+ 
+  <!-- AOS CSS --> 
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> 
+ 
+  <style> 
+    body { font-family: Arial, sans-serif; } 
+    .hero { background: #212529; color: white; padding: 80px 20px; text-align: center; } 
+	 
+    .hero h1 { font-size: 2.5rem; } 
+    .footer { background: #1c1c1c; color: #ddd; padding: 50px 20px; } 
+    .footer h5 { color: #fff; } 
+    .footer a { color: #bbb; text-decoration: none; display: block; margin-bottom: 8px; } 
+    .footer a:hover { color: white; } 
+    .carousel-item img, .carousel-item video { height: 400px; object-fit: cover; } 
+	  h1{
+		  color: white;
+		  font-family: "alegreya-sc";
+	  }
+	  h2{
+		  color: white;
+		  font-size: 40px;
+		  font-family: "alegreya-sc";
+	  }
+	  .custom-hero-text {
+    font-size: 25px;
+    color: white;/* Replace with any color you like */
+    font-family: "alegreya-sc";
+  }
+	  
+	  .card.bg-teal p {
+  color: #000;   /* black text */
+}
+
+/* Footer paragraphs */
+footer p {
+  color: #fff;
+	
+	/* white text */
+}
+	  .partners-bg {
+  background-image: url("images/12.jpg"); /* your image path */
+  background-size: cover;      /* fill the entire section */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat;
+}
+	   
+ 
+	  .custom-hero-para{
+		   font-size: 25px;
+		  color: white;
+		  font-family: "alegreya-sc";
+	  } 
+	  .card-body{
+		  font-size: 23px;
+		  font-family: "alegreya-sc";
+	  }
+	  .card-title{
+		  font-size: 25px;
+		  font-weight: bold;
+	  }
+	  .bi bi-bullseye me-2{
+          font-weight: bold;
+		  font-size: 25px;
+	  }
+	 
+	    .logo-img { 
+   height: 100px; 
+   width: auto; 
+   margin-right: 10px; 
+        }
+	 .btn-primary {
+            background: linear-gradient(to right, #666666, #000000);
+            border: none;
+            color: white !important; 
+            font-weight: 600;
+            transition: all 0.3s ease;
+            }
+
+        .btn-primary:hover,
+            .btn-primary:focus {
+            background: linear-gradient(to right, #666666, #000000);
+            color: whitesmoke!important; 
+            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.4);
+            transform: translateY(-2px);
+            }
+
+        .btn-outline-primary {
+            border: 2px solid black;
+            color: white !important; 
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: transparent;
+            }
+    /* Navbars */ 
+    .navbar-brand { font-size: 1.6rem; letter-spacing: -0.5px; } 
+    .top-nav { min-height: 40px; padding: 0.25rem 0; } 
+    .bottom-nav { min-height: 54px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } 
+    .nav-link { position: relative; font-weight: 500; padding: 0.5rem 1rem !important; transition: 
+all 0.3s ease; } 
+    .top-nav .nav-link { font-size: 0.95rem; } 
+    .bottom-nav .nav-link { font-size: 1.05rem; } 
+    .nav-link:hover { color: #0d6efd !important; } 
+    .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; 
+background-color: #0d6efd; transition: width 0.3s ease; } 
+    .nav-link:hover::after { width: 100%; } 
+    .btn-appointment { background: linear-gradient(to right, #0d6efd, #0dcaf0); border: none; 
+border-radius: 6px; font-weight: 600; transition: all 0.3s ease; } 
+    .btn-appointment:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(13, 
+110, 253, 0.3); } 
+    .navbar-toggler:focus { box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25); } 
+    .divider { width: 1px; height: 24px; background-color: rgba(255,255,255,0.2); margin: 0 
+12px; } 
+    .profile-dropdown { min-width: 200px; } 
+    .profile-icon { font-size: 1.3rem; transition: all 0.3s ease; } 
+    .profile-icon:hover { color: #0dcaf0 !important; transform: scale(1.1); } 
+    .demo-container { background: white; border-radius: 10px; box-shadow: 0 0 15px 
+rgba(0,0,0,0.1); } 
+    .toggle-btn { cursor: pointer; transition: all 0.3s; } 
+    .toggle-btn:hover { transform: scale(1.05); } 
+    .status-badge { position: absolute; top: -5px; right: -5px; width: 10px; height: 10px; 
+border-radius: 50%; background-color: #198754; border: 2px solid #0d6efd; } 
+ 
+    @media (max-width: 991.98px) { 
+      body { padding-top: 0; } 
+      .top-nav, .bottom-nav { position: static; } 
+      .divider { display: none; } 
+      .top-nav .navbar-nav { padding-bottom: 0.5rem; } 
+    } 
+	  .btn-appointment {
+            background: linear-gradient(to right, #ffd700, #ffcc00);
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #555 !important; 
+            transition: all 0.3s ease;
+            }
+
+        .btn-appointment:hover {
+            background: linear-gradient(to right, #ffcc00, #ffa500);
+            color: #555 !important;
+            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.4);
+            transform: translateY(-2px);
+        }
+  </style> 
+</head> 
+<body> 
+  <!-- MAIN NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="#home">
+      <img src="images/logo - header.png" alt="AutoFusion Logo" class="logo-img">
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+
+      <!-- Navbar links -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+
+        <!-- Vehicles Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="vehiclesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Vehicles
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="vehiclesDropdown">
+            <li><a class="dropdown-item" href="Vehicles.html">All Vehicles</a></li>
+            <li><a class="dropdown-item" href="maincars.html">Cars</a></li>
+            <li><a class="dropdown-item" href="main.html">Jeeps</a></li>
+            <li><a class="dropdown-item" href="#bikes">Motorbikes</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="sell_vehicle.php">Sell</a></li>
+        <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="car contact us.html">Contact</a></li>
+      </ul>
+
+      <!-- Login/Profile Buttons -->
+      <div class="d-flex align-items-center">
+        <a href="#search" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-search"></i></a>
+
+        <!-- Logged out -->
+        <div id="login-section" class="d-flex align-items-center">
+          <a href="login page.php" class="btn btn-outline-light btn-sm me-2">
+            <i class="bi bi-person me-1"></i>Login
+          </a>
+          <div class="divider"></div>
+        </div>
+
+        <!-- Logged in -->
+        <div id="profile-section" class="dropdown d-none">
+          <a class="dropdown-toggle d-flex align-items-center text-decoration-none" href="#" role="button" data-bs-toggle="dropdown">
+            <div class="position-relative">
+              <i class="bi bi-person-circle profile-icon text-light"></i>
+              <span class="status-badge"></span>
+            </div>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end profile-dropdown">
+            <li class="dropdown-item-text">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-person-circle me-2 text-primary"></i>
+                <div>
+                  <strong>John Doe</strong>
+                  <p class="small mb-0 text-muted">john.doe@example.com</p>
+                </div>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>My Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-heart me-2"></i>Saved Vehicles</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Account Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+          </ul>
+        </div>
+
+        <a href="#appointment" class="btn btn-sm btn-appointment ms-2"><i class="bi bi-calendar-check me-1"></i>Book an Appointment</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+          
+               
+            
+     
+ 
+	<!-- ===== Hero / About Intro ===== -->
+<section class="py-5 text-center bg-dark">
+  <div class="container">
+    <h1 class="display-4 fw-bold">About Us</h1>
+    <p  class="custom-hero-text" > “Your destination for quality cars and exceptional service”</p>
+  </div>
+</section>
+
+<!-- ===== Two-column About Section ===== -->
+<section class="py-5 bg-dark">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0" >
+        <img src="images/1.webp" alt="Car detailing"  class="img-fluid rounded" >
+      </div>
+      <div class="col-md-6">
+     
+        <h2 class="fw-bold">More than Just a Dealership</h2><br>
+        <p class="custom-hero-para">Welcome to the Auto Fusion Dealership, where we make car buying simple and stress-free. Our team is passionate about matching you with the right vehicle and providing honest, dependable service every step of the way.</p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Logos / Partners ===== -->
+<section class="py-4 bg-teal text-center partners-bg" >
+  <div class="container" >
+    <div class="row g-4 justify-content-center">
+	  <div class="col-6 col-md-3"><img src="images/13.jpg" alt="Partner 1" width="344" height="228" class="img-fluid"></div>
+      <div class="col-6 col-md-3"><img src="images/3.webp" alt="Partner 2" width="344" height="228" class="img-fluid"></div>
+	   
+		<div class="col-6 col-md-3"><img src="images/5.jpg" class="img-fluid" alt="Partner3"></div>
+      <div class="col-6 col-md-3" bgimage=><img src="images/11.jpeg" alt="Partner 4" class="img-fluid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Vision / Mission Cards ===== -->
+<section class="py-5 bg-dark">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-6">
+        <h2 class="fw-bold">Trust the Professionals for Your Next Car</h2><br>
+        <p class="custom-hero-para">At Auto Fusion Dealership, buying a car should be simple and stress-free. Our experienced team guides you at every step, from finding the perfect vehicle to providing honest advice and a smooth purchase process. With careful inspections, personalized service, and a commitment to quality, you can drive away with confidence and peace of mind.</p>
+        <br>
+         <img src="images/15.png" alt="Car team"  class="img-fluid rounded" >
+        
+		  
+      </div>
+      <div class="col-lg-6">
+        <div class="card bg-teal text-dark mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-bullseye me-2"></i>Our Vision</h5>
+            <p>To set the benchmark for quality and sophistication in the automotive market, where every interaction reflects excellence and passion for driving.</p>
+          </div>
+        </div>
+        <div class="card bg-teal text-dark mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-gear me-2"></i>Our Mission</h5>
+            <p>To offer a carefully curated selection of vehicles at competitive prices while delivering expert guidance and dependable after-sales support.</p>
+          </div>
+        </div>
+        <div class="card bg-teal text-dark">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-award me-2"></i>Award Winning</h5>
+            <p>Winner of the 2024 Dealer of the Year and Best Service Center awards, we take pride in setting the benchmark for reliability, transparency, and customer experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+	
+	 
+  <!-- Footer --> 
+  <footer class="text-light bg-dark pt-5 pb-4"> 
+    <div class="container text-md-left"> 
+      <div class="row text-md-left"> 
+        <!-- Brand --> 
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3"> 
+     <div class="d-flex align-items-center mb-4">
+			
+       
+    <img src="images/logo - footer.png" alt="AutoFusion Logo" class="logo-img me-2" 
+style="width:220px; height:auto;"> 
+     
+  </div> 
+          <p>We are your trusted vehicle dealership for Cars, Jeeps, and Motorbikes in Sri 
+Lanka. Explore the best deals and services with us.</p> 
+        </div> 
+        <!-- Quick Links --> 
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3"> 
+          <h5 class="text-uppercase mb-4 fw-bold">Quick Links</h5> 
+          <p><a href="index.php" class="text-light text-decoration-none">Home</a></p> 
+          <p><a href="Vehicles.html" class="text-light text-decoration-none">Vehicles</a></p> 
+          <p><a href="aboutus.html" class="text-light text-decoration-none">About Us</a></p> 
+          <p><a href="car contact us.html" class="text-light text-decoration-none">Contact</a></p> 
+        </div> 
+        <!-- Support --> 
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3"> 
+          <h5 class="text-uppercase mb-4 fw-bold">Support</h5> 
+          <p><a href="faq1.html" class="text-light text-decoration-none">FAQ</a></p> 
+          <p><a 
+href="https://www.freeprivacypolicy.com/live/748b3ad2-e2c4-477a-ba69-a5a55a4e1fde" 
+class="text-light text-decoration-none">Privacy Policy</a></p> 
+          <p><a 
+href="https://www.termsfeed.com/live/b1703a75-1e56-4442-996e-1c5e15014aab" 
+class="text-light text-decoration-none">Terms & Conditions</a></p> 
+        </div> 
+        <!-- Newsletter --> 
+        <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mt-3"> 
+          <h5 class="text-uppercase mb-4 fw-bold">Stay Updated</h5> 
+          <p>Subscribe to our newsletter and get the latest offers, vehicle updates, and industry 
+news directly in your inbox.</p> 
+          <form class="d-flex"> 
+            <input type="email" class="form-control me-2" placeholder="Enter your email" 
+required> 
+            <button class="btn btn-primary" type="submit">Subscribe</button> 
+          </form> 
+          <div class="mt-4"> 
+            <h6 class="fw-bold">Follow Us</h6> 
+            <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-5"></i></a> 
+            <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-5"></i></a> 
+            <a href="#" class="text-light"><i class="bi bi-twitter fs-5"></i></a> 
+          </div> 
+        </div> 
+      </div> 
+      <hr class="mb-4"> 
+      <div class="row align-items-center"> 
+        <div class="col-md-7 col-lg-8"> 
+          <p class="text-center text-md-start">© 2025 AutoFusion. All Rights Reserved.</p> 
+        </div> 
+        <div class="col-md-5 col-lg-4"> 
+          <p class="text-center text-md-end">Designed by Group ( I )&nbsp; &nbsp;&nbsp; 
+<span class="fw-bold">&nbsp;</span></p> 
+        </div> 
+      </div> 
+    </div> 
+  </footer>
+	<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
+
+	
+
+
+
+ 
